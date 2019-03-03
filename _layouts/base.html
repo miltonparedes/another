@@ -1,0 +1,25 @@
+---
+layout: compress
+---
+<!DOCTYPE html>
+<html lang="es" class="no-js">
+  {% include head.html %}
+  <body class="light">
+    <div class="content">
+      <nav>
+        {% assign sorted_pages = site.pages | sort: "priority" %}
+        {% for page in sorted_pages %}
+          {% if page.priority %}
+          <li><a href="{{ page.url }}">{{ page.title }}</a></li>
+          {% endif %}
+				{% endfor %}
+      </nav>
+      <img src="{{ site.url }}/assets/img/icons/dark.svg" id="dark" />
+      <img src="{{ site.url }}/assets/img/icons/circle.svg" id="light" />
+      <div class="container {% if page.fluid or layout.fluid %}fluid{% endif %}">
+        {{ content }}
+      </div>
+    </div>
+    {% include dark-light.html %}
+  </body>
+</html>
