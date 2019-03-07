@@ -1,0 +1,223 @@
+.ais-search-box {
+  max-width: 100%;
+  margin-bottom: 15px;
+}
+
+.ais-search-box {
+  display: inline-block;
+  position: relative;
+  height: 46px;
+  white-space: nowrap;
+  font-size: 14px;
+}
+
+.ais-search-box {
+  position: relative;
+  max-width: 300px;
+  width: 100%;
+}
+
+.ais-search-box--input {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  font: inherit;
+  background: #fff;
+  display: inline-block;
+  border: 1px solid #d4d8e3;
+  border-radius: 4px;
+  -webkit-box-shadow: 0 1px 1px 0 rgba(85,95,110,.2);
+  box-shadow: 0 1px 1px 0 rgba(85,95,110,.2);
+  -webkit-transition: background .4s ease,-webkit-box-shadow .4s ease;
+  transition: box-shadow .4s ease,background .4s ease;
+  transition: box-shadow .4s ease,background .4s ease,-webkit-box-shadow .4s ease;
+  padding: 10px 10px 10px 35px;
+  vertical-align: middle;
+  white-space: normal;
+  height: 100%;
+  width: 100%;
+}
+
+.ais-search-box {
+  white-space: nowrap;
+  font-size: 14px;
+}
+
+.ais-search-box--loading-indicator-wrapper, .ais-search-box--magnifier {
+  fill: #bfc7d8;
+  left: 12px;
+  top: calc(50% - 18px/2);
+}
+
+.ais-search-box--loading-indicator-wrapper, .ais-search-box--magnifier, .ais-search-box--reset {
+  background: 0 0;
+  position: absolute;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.ais-search-box {
+  white-space: nowrap;
+  font-size: 14px;
+}
+
+.ais-search-box--loading-indicator-wrapper svg, .ais-search-box--magnifier svg {
+  height: 18px;
+  width: 18px;
+}
+
+.ais-search-box--loading-indicator-wrapper svg, .ais-search-box--magnifier svg {
+  vertical-align: middle;
+  height: 14px;
+  width: 14px;
+}
+
+.ais-search-box--magnifier svg {
+
+  display: block;
+}
+
+.ais-search-box--loading-indicator-wrapper svg, .ais-search-box--magnifier svg {
+  height: 18px;
+  width: 18px;
+}
+
+.ais-search-box--loading-indicator-wrapper svg, .ais-search-box--magnifier svg {
+  vertical-align: middle;
+  height: 14px;
+  width: 14px;
+}
+
+.ais-search-box--magnifier svg {
+  display: block;
+}
+
+[class^="ais-"], [class^="ais-"] > *, [class^="ais-"] > ::after, [class^="ais-"] > ::before {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.ais-search-box--loading-indicator-wrapper, .ais-search-box--magnifier {
+  fill: #bfc7d8;
+}
+
+.ais-search-box {
+  white-space: nowrap;
+  font-size: 14px;
+}
+
+#pagination{
+  text-align: center;
+  padding: 2rem 0;
+}
+
+.ais-pagination {
+  display: inline-block;
+  width: auto;
+}
+
+.ais-pagination--item__disabled {
+  color: #bbb;
+  opacity: .5;
+  pointer-events: none;
+  visibility: visible;
+}
+
+.ais-pagination--item {
+  border-radius: 4px;
+  font-size: 16px;
+  text-align: center;
+  width: 28px;
+}
+
+.ais-pagination--item {
+  display: inline-block;
+  padding: 3px;
+}
+
+.ais-pagination--link {
+  color: #697782;
+  display: block;
+  border: 0;
+  text-decoration: none;
+  width: 100%;
+}
+
+.ais-pagination--item__disabled {
+  color: #bbb;
+  pointer-events: none;
+  visibility: visible;
+}
+
+.ais-pagination--item {
+  font-size: 14px;
+  text-align: center;
+}
+
+.ais-pagination--item__disabled {
+  color: #bbb;
+  opacity: .5;
+  pointer-events: none;
+  visibility: visible;
+}
+
+.ais-pagination--item {
+  font-size: 14px;
+  text-align: center;
+  width: 28px;
+}
+
+.ais-pagination--item {
+  display: inline-block;
+  padding: 3px;
+}
+
+.ais-pagination--item__active {
+  background: $body-bg-alter;
+}
+
+.ais-search-box--reset {
+  cursor: pointer;
+  top: 5px;
+  right: 5px;
+  margin: 0;
+  border: 0;
+  padding: 0;
+}
+
+.ais-search-box--reset {
+  fill: #bfc7d8;
+  top: calc(50% - 12px/2);
+  right: 13px;
+}
+
+.ais-search-box--reset {
+  background: 0 0;
+  position: absolute;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.ais-search-box--reset svg {
+  display: block;
+  width: 12px;
+  height: 12px;
+}
+
+.ais-hits--item{
+  border-bottom: 1px solid rgba(0,0,0,.1);
+  
+  &:last-child{
+    border-bottom: 0;
+  }
+}

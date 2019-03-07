@@ -1,0 +1,55 @@
+// Gray
+$gray-1: #bcbcbc;
+$gray-2: #878787;
+$gray-3: #686868;
+$gray-4: #3b3b3b;
+$gray-5: #2b2b2b;
+// #565656
+// #484848
+// #393939
+// #2b2b2b
+// #1c1c1c
+
+
+// Glitch global colors
+$color-one: #00f;
+$color-two: $color-one;
+
+
+// Root
+$root-font-family: 'Inter UI', system-ui, sans-serif;
+$root-font-family-var: 'Inter UI var alt', system-ui, sans-serif;
+$root-font-size: 16px;
+$root-letter-spacing: -0.005em;
+$root-line-height: 22px;
+
+$body-color: $gray-4;
+$body-bg: #fff;
+$body-bg-alter: #f7fbfb;
+
+
+// Links
+$link-color: darken($color-two, 9%);
+
+
+// h* fonts
+$h-font: $root-font-family;
+
+
+// Lists
+$li-color: lighten($body-color, 5%);
+$li-link-color: lighten($gray-4, 10%);
+$li-link-color-border: $color-one;
+
+$border-color: #e5e5e5;
+
+
+// Responsive
+$large-breakpoint: 38em;
+$large-font-size: 18px;
+$large-font-letter-spacing: -0.008em;
+$large-font-line-height: 25px;
+
+// Code
+$code-font-family: SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace;
+$code-color: #bf616a;

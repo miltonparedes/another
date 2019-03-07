@@ -1,0 +1,69 @@
+// Posts and pages
+//
+// Each post is wrapped in `.post` and is used on default and post layouts. Each
+// page is wrapped in `.page` and is only used on the page layout.
+.post {
+  margin: 2em 0 4em;
+
+  ul{
+    padding-left: 2rem;
+  }
+
+  li + li {
+    margin-top: .25rem;
+  }
+
+  p{
+    text-align: left;
+  }
+
+  header{
+
+    h1{
+      padding: 0;
+      margin: 2.5rem 0 1rem;
+    }
+
+    .info{
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .min-head{
+      font-weight: 500;
+    }
+
+  }
+
+  .image{
+    text-align: center;
+    margin: 1.2rem 0;
+
+    img{
+      margin: .9rem 0;
+    }
+
+    figcaption{
+      color: $gray-3;
+      font-size: .95rem;
+    }
+
+  }
+
+}
+// Blog post or page title
+.page-title,
+.post-title{
+  color: $gray-4;
+}
+.page-title,
+.post-title {
+  margin-top: 0;
+}
+
+// Related posts
+.container.related {
+  max-width: 50rem;
+  padding: 0;
+  margin-bottom: 2rem;
+}

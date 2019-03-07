@@ -1,0 +1,23 @@
+// Layout
+//
+// Styles for managing the structural hierarchy of the site.
+
+.content{
+  width: calc(100% - 24px);
+  @media (min-width: $large-breakpoint) {
+    width: calc(100% - 33.51px);
+  }
+}
+.container {
+  max-width: 22.5rem;
+  padding-top: 15vh;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  margin-left: 0rem;
+  &.fluid{
+    max-width: 37rem;
+  }
+  @media (min-width: $large-breakpoint) {
+    margin-left: 7rem;
+  }
+}
