@@ -1,9 +1,9 @@
-// Gray
-$gray-1: #bcbcbc;
-$gray-2: #878787;
-$gray-3: #686868;
-$gray-4: #3b3b3b;
-$gray-5: #2b2b2b;
+// dark
+$dark-4: #bcbcbc;
+$dark-3: #878787;
+$dark-2: #686868;
+$dark-1: #3b3b3b;
+$dark-0: #2b2b2b;
 
 // Root
 $root-font-family: 'Inter UI', system-ui, sans-serif;
@@ -12,13 +12,13 @@ $root-font-size: 16px;
 $root-letter-spacing: -0.005em;
 $root-line-height: 22px;
 
-$body-color: $gray-4;
+$body-color: $dark-4;
 $body-bg: #fff;
 $body-bg-alter: #f7fbfb;
 
 
 // Links
-$link-color: $gray-5;
+$link-color: $dark-5;
 
 
 // h* fonts
@@ -27,16 +27,16 @@ $h-font: $root-font-family;
 
 // Lists
 $li-color: lighten($body-color, 5%);
-$li-link-color: lighten($gray-4, 10%);
-$li-link-color-border: $gray-5;
+$li-link-color: lighten($dark-4, 10%);
+$li-link-color-border: $dark-5;
 $border-color: #e5e5e5;
 
 
 // Responsive
 $large-breakpoint: 38em;
-$large-font-size: 18px;
-$large-font-letter-spacing: -0.008em;
-$large-font-line-height: 25px;
+$large-font-size: 16px;
+$large-font-letter-spacing: -0.005em;
+$large-font-line-height: 22px;
 
 // Code
 $code-font-family: SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace;

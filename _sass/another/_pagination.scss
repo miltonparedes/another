@@ -14,7 +14,7 @@
   padding: 1rem;
   border: solid #eee;
   border-width: 1px 0;
-  color: $gray-2;
+  color: $dark-2;
 
   &:first-child {
     margin-bottom: -1px;
@@ -22,7 +22,7 @@
 }
 
 span.pagination-item{
-  color: $gray-1;
+  color: $dark-1;
 }
 // Only provide a hover state for linked pagination items
 a.pagination-item:hover {
