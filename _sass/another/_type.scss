@@ -42,7 +42,7 @@ h1 {
 
 a:hover{
   .min-head{
-    color: $color-one;
+    color: gray-5;
   }
 }
 .end{
@@ -65,7 +65,7 @@ h3 {
   font-size: 20px;
   letter-spacing: -0.011em;
   line-height: 28px;
-  
+
   @media (max-width: $large-breakpoint) {
     font-size: 20px;
     letter-spacing: -0.011em;
