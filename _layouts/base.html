@@ -5,12 +5,10 @@ layout: compress
 <html lang="en">
   {% include head.html %}
   <body class="dark">
-    <div class="content">
-      {% include menu.html %}
-      {% include dark-light.html %}
-      <div class="container {% if page.fluid or layout.fluid %}fluid{% endif %}">
-        {{ content }}
-      </div>
+    {% include menu.html %}
+    {% include dark-light.html %}
+    <div class="container {% if page.fluid or layout.fluid %}fluid{% endif %}">
+      {{ content }}
     </div>
   </body>
 </html>
