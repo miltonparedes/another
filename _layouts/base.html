@@ -4,11 +4,15 @@ layout: compress
 <!DOCTYPE html>
 <html lang="en">
   {% include head.html %}
-  <body class="dark">
+  <body class="light">
     {% include menu.html %}
-    {% include dark-light.html %}
+    {% include dark-mode.html %}
     <div class="container {% if page.fluid or layout.fluid %}fluid{% endif %}">
       {{ content }}
     </div>
+
+    {% if dark_mode %}
+      <script src="{{ site.url }}/assets/js/main.js" charset="utf-8"></script>
+    {% endif %}
   </body>
 </html>
