@@ -33,8 +33,6 @@ markdown: kramdown
 
 plugins:
   - jekyll-feed
-  - jekyll-octicons
-  - jekyll-github-metadata
 
 # Exclude from processing.
 exclude:
