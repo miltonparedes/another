@@ -1,13 +1,13 @@
-const setTheme = (t1, t2) => {
-  document.body.classList.replace(t1, t2);
+const setTheme = (theme) => {
+  document.documentElement.setAttribute('data-theme', theme);
 };
 const initTheme = (t1, t2) => {
   document.getElementById(t1).addEventListener("click", () => {
-    setTheme(t2, t1);
+    setTheme(t1);
     localStorage.setItem("theme", t1);
   });
 };
 const theme = localStorage.getItem("theme") || "light";
-setTheme("light", theme);
+setTheme(theme);
 initTheme("light", "dark");
 initTheme("dark", "light");
