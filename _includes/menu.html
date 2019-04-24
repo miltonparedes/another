@@ -1,8 +1,10 @@
-<nav>
-  {% assign sorted_pages = site.pages | sort: "priority" %}
-  {% for page in sorted_pages %}
-    {% if page.priority %}
-    <li><a href="{{ page.url }}">{{ page.title }}</a></li>
-    {% endif %}
-  {% endfor %}
+<nav class="nav-menu heading-md">
+  <ul>
+    {% assign sorted_pages = site.pages | sort: "priority" %}
+    {% for node in sorted_pages %}
+      {% if node.priority %}
+      <li class="{% if node.title == page.title %}active{% endif %}"><a href="{{ node.url }}">{{ node.title }}</a></li>
+      {% endif %}
+    {% endfor %}
+  </ul>
 </nav>

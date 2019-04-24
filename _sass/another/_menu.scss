@@ -1,0 +1,22 @@
+.nav-menu {
+  ul {
+    li {
+      display: inline;
+      list-style: none;
+      padding: 3px;
+      
+      a{
+        border-bottom: 0;
+        text-transform: lowercase;
+
+        &::before {
+          content: "/";
+        }
+
+        &:first-child::before {
+          content: "";
+        }
+      }
+    }
+  }
+}
