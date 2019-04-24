@@ -1,83 +1,53 @@
-// Typography
-//
-// Headings, body text, lists, and other misc typographic elements.
-
-h1, h2, h3, h4, h5, h6 {
-  font-family: $h-font;
-  font-weight: normal;
-  color: $dark-4;
-  text-rendering: optimizeLegibility;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.heading-lg,
+.heading-md,
+.heading-sm,
+.heading-xs {
+  margin-bottom: $headings-margin-bottom;
+  font-weight: $headings-font-weight;
+  color: var(--heading-color);
 }
 
-h1 {
-  font-size: 30px;
-  letter-spacing: -0.016em;
-  line-height: 42px;
+h1,
+.heading-lg { @include properties($heading-lg); }
 
-  a{
-    border-bottom: 0;
-  }
+h2,
+.heading-md { @include properties($heading-md); }
 
-  @media (max-width: $large-breakpoint) {
-    font-size: 30px;
-    letter-spacing: -0.016em;
-    line-height: 42px;
-  }
+h3,
+.heading-sm { @include properties($heading-sm); }
 
-}
+h4,
+h5,
+h6,
+.heading-xs { @include properties($heading-xs); }
 
-.min-head{
+.min-head {
   font-weight: 600;
   font-size: 12px;
   color: $dark-3;
   line-height: 17px;
   letter-spacing: calc(0.008em * 10);
 
-  svg{
+  svg {
     vertical-align: middle;
     margin-top: -3px;
   }
-
 }
 
-a:hover{
-  .min-head{
+a:hover {
+  .min-head {
     color: $dark-4;
   }
 }
-.end{
+
+.end {
   text-align: end;
-}
-h2 {
-  font-size: 24px;
-  letter-spacing: -0.014em;
-  line-height: 34px;
-
-  @media (max-width: $large-breakpoint) {
-    font-size: 24px;
-    letter-spacing: -0.014em;
-    line-height: 34px;
-  }
-
-}
-
-h3 {
-  font-size: 20px;
-  letter-spacing: -0.011em;
-  line-height: 28px;
-
-  @media (max-width: $large-breakpoint) {
-    font-size: 20px;
-    letter-spacing: -0.011em;
-    line-height: 28px;
-  }
-
-}
-
-h4, h5, h6 {
-  font-weight: bold;
-  margin-top: 1rem;
-  font-size: 1rem;
 }
 
 p {
@@ -89,7 +59,9 @@ strong {
   color: #303030;
 }
 
-ul, ol, dl {
+ul,
+ol,
+dl {
   margin-top: 0;
   margin-bottom: 1rem;
 }
@@ -99,7 +71,7 @@ dt {
 }
 
 dd {
-  margin-bottom: .5rem;
+  margin-bottom: 0.5rem;
 }
 
 hr {
@@ -123,10 +95,10 @@ abbr {
 }
 
 blockquote {
-  padding: .5rem 1rem;
-  margin: .8rem 0;
+  padding: 0.5rem 1rem;
+  margin: 0.8rem 0;
   color: #7a7a7a;
-  border-left: .25rem solid #e5e5e5;
+  border-left: 0.25rem solid #e5e5e5;
 
   p:last-child {
     margin-bottom: 0;
@@ -138,7 +110,6 @@ blockquote {
   }
 }
 
-
 // Markdown footnotes
 //
 // See the example content post for an example.
@@ -148,7 +119,7 @@ a[href^="#fn:"],
 // Back to footnote link
 a[href^="#fnref:"] {
   display: inline-block;
-  margin-left: .1rem;
+  margin-left: 0.1rem;
   font-weight: bold;
 }
 
