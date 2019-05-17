@@ -1,11 +1,9 @@
 ---
 layout: home
-title: "~/another"
+title: "another"
 priority: 0
 ---
 
-I’m a programmer, blogger, and walk enthusiast living in NYC. Currently I work at Patreon.
+Hello, this is **Another Theme**. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris vel nisi sit amet justo vestibulum volutpat dictum bibendum purus. Etiam nec laoreet mi.
 
-Most of my code is public on GitHub. Check out my blog on tech and Internet products, The Web’s Grain.
-
-The best ways to contact me are Twitter and email.
+You can find me on [twitter](//twitter.com/olafmilton) and [github](//github.com/miltonolaf/another), or reach me via [hey@miltonolaf.com](mailto:hey@miltonolaf.com).
