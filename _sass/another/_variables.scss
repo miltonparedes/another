@@ -1,17 +1,17 @@
 :root {
-  --primary-color: #302AE6;
-  --secondary-color: #536390;
+  --primary-color: #202020;
+  --secondary-color: #191919;
   --font-color: #3b3b3b;
-  --bg-color: #fff;
+  --bg-color: #f9f9f9;
   --heading-color: #2b2b2b;
 }
 
 [data-theme="dark"] {
-  --primary-color: #9A97F3;
-  --secondary-color: #818cab;
+  --primary-color: #dbdbdb;
+  --secondary-color: #eee;
   --font-color: #bcbcbc;
-  --bg-color: #3b3b3b;
-  --heading-color: #878787;
+  --bg-color: #171717;
+  --heading-color: #ececec;
 }
 
 // dark
@@ -22,67 +22,82 @@ $dark-1: #3b3b3b;
 $dark-0: #2b2b2b;
 
 // Root
-$root-font-family: 'Inter UI', system-ui, sans-serif;
-$root-font-family-var: 'Inter UI var alt', system-ui, sans-serif;
+$root-font-family: 'Inter', system-ui, sans-serif;
+$root-font-family-var: 'Inter var', system-ui, sans-serif;
 $root-font-size: 16px;
-$root-letter-spacing: -0.005em;
+$root-letter-spacing: -0.011em;
 $root-line-height: 22px;
 
 // Responsive
 $large-breakpoint: 1024px;
 $medium-breakpoint: 768px;
 $large-font-size: 18px;
-$large-font-letter-spacing: -0.005em;
-$large-font-line-height: 22px;  
-
-// Code
-$code-font-family: SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace;
-$code-color: #bf616a;
+$large-font-letter-spacing: -0.014em;
+$large-font-line-height: 25px;
 
 // Typography
 //
 // Headings, body text, lists, and other misc typographic elements.
 
-$headings-margin-bottom: 1rem;
-$headings-font-weight: 400;
+$headings-margin-bottom: 0.75rem;
 $headings-color: var(--heading-color);
 
 $heading-lg: (
   font-size: 24px,
-  font-weight: 700,
+  font-weight: 600,
   letter-spacing: -0.019em,
   line-height: 34px,
 );
 $heading-md: (
   font-size: 20px,
-  font-weight: 700,
+  font-weight: 600,
   letter-spacing: -0.017em,
   line-height: 28px,
 );
 $heading-sm: (
-  font-size: 16px,
+  font-size: 18px,
   font-weight: 600,
-  letter-spacing: -0.011em,
-  line-height: 22px,
+  letter-spacing: -0.014em,
+  line-height: 25px,
 );
 $heading-xs: (
-  font-size: 14px,
+  font-size: 16px,
   font-weight: 600,
-  letter-spacing: -0.006em,
-  line-height: 20px,
+  letter-spacing: -0.011em,
+  line-height: 22px,
 );
-$body-01: (
+
+$body-lg: (
+  font-size: 18px,
+  font-weight: 400,
+  letter-spacing: -0.014em,
+  line-height: 25px,
+);
+
+$body-md: (
   font-size: 16px,
   font-weight: 400,
   letter-spacing: -0.011em,
   line-height: 22px,
 );
-$body-02: (
+
+$body-sm: (
   font-size: 14px,
   font-weight: 400,
   letter-spacing: -0.006em,
   line-height: 20px,
 );
+
+$body-xs: (
+  font-size: 13px,
+  font-weight: 400,
+  letter-spacing: -0.003em,
+  line-height: 18px,
+);
+
+$code-font-family: "IBM Plex Mono", monospace;
+$code-color: #bf616a;
+
 
 // Add properties
 // Used to convert elements of Sass maps into CSS attributes

@@ -9,7 +9,6 @@ h6,
 .heading-sm,
 .heading-xs {
   margin-bottom: $headings-margin-bottom;
-  font-weight: $headings-font-weight;
   color: var(--heading-color);
 }
 
@@ -27,25 +26,6 @@ h5,
 h6,
 .heading-xs { @include properties($heading-xs); }
 
-.min-head {
-  font-weight: 600;
-  font-size: 12px;
-  color: $dark-3;
-  line-height: 17px;
-  letter-spacing: calc(0.008em * 10);
-
-  svg {
-    vertical-align: middle;
-    margin-top: -3px;
-  }
-}
-
-a:hover {
-  .min-head {
-    color: $dark-4;
-  }
-}
-
 .end {
   text-align: end;
 }
@@ -56,7 +36,7 @@ p {
 }
 
 strong {
-  color: #303030;
+  color: var(--primary-color);
 }
 
 ul,

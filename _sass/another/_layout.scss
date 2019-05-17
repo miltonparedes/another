@@ -2,22 +2,65 @@
 //
 // Styles for managing the structural hierarchy of the site.
 
-.content{
-  width: calc(100% - 24px);
+.content {
+  width: 100%;
+
   @media (min-width: $large-breakpoint) {
-    width: calc(100% - 33.51px);
+    width: 70%;
   }
 }
+
 .container {
-  max-width: 22.5rem;
-  padding-top: 15vh;
+  max-width: 100%;
+  padding-top: 20vh;
   padding-left: 1.5rem;
   padding-right: 1.5rem;
-  margin-left: 0rem;
-  &.fluid{
+  margin-left: 0;
+
+  &.fluid {
     max-width: 37rem;
   }
-  @media (min-width: $large-breakpoint) {
-    margin-left: 7rem;
+
+  @media (min-width: $medium-breakpoint) {
+    padding-top: 25vh;
+    max-width: 70%;
+    margin: auto;
+  }
+}
+
+#light,
+#dark {
+  display: block;
+  position: absolute;
+  cursor: pointer;
+  border-bottom: none;
+  margin: 2rem 1rem;
+  right: 0;
+
+  svg {
+    width: 1.333rem;
+    height: 1.333rem;
+  }
+
+  &:hover {
+    color: inherit;
+  }
+
+  @media (min-width: $medium-breakpoint) {
+    margin: 2rem;
+  }
+}
+
+#light {
+  display: none;
+}
+
+[data-theme="dark"] {
+  #light {
+    display: block;
+  }
+
+  #dark {
+    display: none;
   }
 }

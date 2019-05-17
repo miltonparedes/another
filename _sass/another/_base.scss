@@ -16,17 +16,15 @@ body {
 
 html {
   font-family: $root-font-family;
-  font-size: $root-font-size;
-  line-height: $root-line-height;
-  letter-spacing: $root-letter-spacing;
+
+  @include properties($body-md);
+
   font-kerning: normal;
   -moz-font-feature-settings: "calt" 1, "kern" 1, "liga" 1;
   font-feature-settings: "calt" 1, "kern" 1, "liga" 1;
 
   @media (min-width: $medium-breakpoint) {
-    font-size: $large-font-size;
-    line-height: $large-font-line-height;
-    letter-spacing: $large-font-letter-spacing;
+    @include properties($body-lg);
   }
 }
 
@@ -45,8 +43,8 @@ body {
 
 // No `:visited` state is required by default (browsers will use `a`)
 a {
-  border-bottom: 1px solid;
   color: inherit;
+  font-weight: 600;
   text-decoration: none;
   outline: inherit;
   // `:focus` is linked to `:hover` for basic accessibility
