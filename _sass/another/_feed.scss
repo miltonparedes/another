@@ -1,7 +1,49 @@
-.post-feed {
-  list-style: none;
-
+.posts-feed {
+  margin-bottom: 0.5rem;
   .post-node {
     font-weight: 400;
+    border-bottom: 1px solid var(--border-color);
+
+    &:first-child{
+      border-top: 1px solid var(--border-color);
+    }
+
+    .post-link {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-align-items: center;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+
+      padding: 1rem 0;
+
+      .post-title {
+        @include properties($body-sm);
+
+        @media (min-width: $medium-breakpoint) {
+          @include properties($body-md);
+        }
+      }
+
+      .post-date {
+        @include properties($body-xs);
+        margin-left: 1rem;
+        opacity: 0.75;
+
+        @media (min-width: $medium-breakpoint) {
+          @include properties($body-sm);
+          margin-left: 1rem;
+        }
+      }
+    }
   }
+}
+
+.next-post {
+  @include properties($body-sm);
+
+  font-weight: 600 !important;
 }
