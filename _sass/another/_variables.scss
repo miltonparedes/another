@@ -1,10 +1,12 @@
 :root {
   --primary-color: #202020;
+  --rgb-primary: 32,32,32;
   --bg-color: #f9f9f9;
 }
 
 [data-theme="dark"] {
   --primary-color: #dbdbdb;
+  --rgb-primary: 219,219,219;
   --bg-color: #171717;
 }
 
