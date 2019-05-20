@@ -1,1 +1,13 @@
-<h2>Selected projects</h2>
+<h2 class="mt-lg">Main projects</h2>
+
+<ul class="posts-feed">
+{% for project in site.data.projects | limit:5 %}
+  <li class="post-node">
+    <a href="{{ post.url }}" class="post-link" style="justify-content: normal">
+      <span class="post-title">{{ project.name }}</span>
+      <span class="post-date" style="margin-left: 1rem;">{{ project.description }}</span> 
+    </a>
+  </li>
+{% endfor %}
+</ul>
+<a href="//github.com/miltonolaf" class="next-post">More projects →</a>

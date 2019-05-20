@@ -1,0 +1,11 @@
+- name: Tensorflow
+  description: An open-source machine learning framework for everyone.
+  web: https://tensorflow.org/
+
+- name: Another Theme
+  description: A simple and cool theme for Jekyll and GitHub Pages.
+  web: http://miltonolaf.com/glitch-jekyll
+
+- name: Feather Icons
+  description: Feather is a collection of simply beautiful open source icons.
+  web: https://feathericons.com/
