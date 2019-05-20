@@ -12,7 +12,7 @@
 
 .container {
   max-width: 100%;
-  padding-top: 20vh;
+  padding: 20vh 0;
   padding-left: 1.5rem;
   padding-right: 1.5rem;
   margin-left: 0;
@@ -22,7 +22,7 @@
   }
 
   @media (min-width: $medium-breakpoint) {
-    padding-top: 25vh;
+    padding: 25vh 0;
     max-width: 70%;
     margin: auto;
   }
