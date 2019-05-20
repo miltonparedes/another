@@ -1,12 +1,10 @@
-{% assign posts_total = site.posts | size %}
-{% assign user = site.github.owner %}
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>{{ user.name }}</title>
+  <title>{{ site.title }}</title>
   {% seo title=false %}
-  <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/main.css">
-  <link rel="shortcut icon" href="{{ site.baseurl }}/assets/img/{{ site.favicon }}">
+  <link rel="stylesheet" href="{{ site.url }}/assets/css/main.css">
+  <link rel="shortcut icon" href="{{ site.url }}/assets/img/{{ site.favicon }}">
   {% feed_meta %}
   {% include analytics.html %}
 </head>
