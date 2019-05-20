@@ -35,7 +35,7 @@ html {
 }
 
 body {
-  color: var(--font-color);
+  color: rgba(var(--rgb-primary), 0.85);
   background-color: var(--bg-color);
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
@@ -50,7 +50,7 @@ a {
   // `:focus` is linked to `:hover` for basic accessibility
   &:hover,
   &:focus {
-    color: $dark-4;
+    opacity: 0.8;
   }
 
   strong {

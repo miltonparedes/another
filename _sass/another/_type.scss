@@ -8,8 +8,9 @@ h6,
 .heading-md,
 .heading-sm,
 .heading-xs {
+  margin-top: $headings-margin-top;
   margin-bottom: $headings-margin-bottom;
-  color: var(--heading-color);
+  color: var(--primary-color);
 }
 
 h1,
@@ -42,8 +43,10 @@ strong {
 ul,
 ol,
 dl {
+  list-style: none;
   margin-top: 0;
   margin-bottom: 1rem;
+  
 }
 
 dt {

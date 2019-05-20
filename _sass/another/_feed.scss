@@ -1,11 +1,12 @@
 .posts-feed {
   margin-bottom: 0.5rem;
+
   .post-node {
     font-weight: 400;
-    border-bottom: 1px solid var(--border-color);
+    border-bottom: 1px solid rgba(var(--rgb-primary), 0.075);
 
     &:first-child{
-      border-top: 1px solid var(--border-color);
+      border-top: 1px solid rgba(var(--rgb-primary), 0.1);
     }
 
     .post-link {
