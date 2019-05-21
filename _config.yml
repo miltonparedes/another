@@ -33,6 +33,9 @@ markdown: kramdown
 
 plugins:
   - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-paginate
+  - jekyll-sitemap
 
 # Exclude from processing.
 exclude:
