@@ -3,7 +3,7 @@
 <ul class="posts-feed">
 {% for post in site.posts | limit:3 %}
   <li class="post-node">
-    <a href="{{ post.url }}" class="post-link">
+    <a href="{{ site.url }}{{ post.url }}" class="post-link">
       <span class="post-title">{{ post.title }}</span>
       <time class="post-date">{{ post.date | date: "%B %d, %Y" }}</time> 
     </a>
