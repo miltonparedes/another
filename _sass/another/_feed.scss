@@ -45,7 +45,8 @@
 
 .next-post {
   @include properties($body-sm);
-
+  font-size: 65% !important;
   font-weight: 600 !important;
+  text-transform: uppercase;
   border-bottom: 0;
 }
