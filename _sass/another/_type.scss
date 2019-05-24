@@ -37,7 +37,8 @@ p {
 }
 
 strong {
-  color: var(--primary-color);
+  color: inherit;
+  font-weight: 600;
 }
 
 ul,
