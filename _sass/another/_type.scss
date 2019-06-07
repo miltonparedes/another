@@ -14,18 +14,18 @@ h6,
 }
 
 h1,
-.heading-lg { @include properties($heading-lg); }
+.heading-xl { @include properties($heading-xl); }
 
 h2,
-.heading-md { @include properties($heading-md); }
+.heading-lg { @include properties($heading-lg); }
 
 h3,
-.heading-sm { @include properties($heading-sm); }
+.heading-md { @include properties($heading-md); }
 
 h4,
 h5,
 h6,
-.heading-xs { @include properties($heading-xs); }
+.heading-sm { @include properties($heading-sm); }
 
 .end {
   text-align: end;

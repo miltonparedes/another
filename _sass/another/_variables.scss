@@ -32,27 +32,33 @@ $headings-margin-top: 1.75rem;
 $headings-margin-bottom: 0.75rem;
 $headings-color: var(--primary-color);
 
+$heading-xl: (
+  font-size: 40px,
+  font-weight: 500,
+  letter-spacing: -0.022em,
+  line-height: 56px,
+);
 $heading-lg: (
   font-size: 24px,
-  font-weight: 600,
+  font-weight: 500,
   letter-spacing: -0.019em,
   line-height: 34px,
 );
 $heading-md: (
   font-size: 20px,
-  font-weight: 600,
+  font-weight: 500,
   letter-spacing: -0.017em,
   line-height: 28px,
 );
 $heading-sm: (
   font-size: 18px,
-  font-weight: 600,
+  font-weight: 500,
   letter-spacing: -0.014em,
   line-height: 25px,
 );
 $heading-xs: (
   font-size: 16px,
-  font-weight: 600,
+  font-weight: 500,
   letter-spacing: -0.011em,
   line-height: 22px,
 );
