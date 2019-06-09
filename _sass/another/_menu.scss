@@ -23,7 +23,6 @@
 
       &:first-child::before {
         content: "~/";
-        padding-left: 0;
       }
     }
   }
