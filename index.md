@@ -1,6 +1,6 @@
 ---
 layout: home
-title: "another"
+title: another
 priority: 0
 ---
 
