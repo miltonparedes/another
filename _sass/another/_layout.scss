@@ -12,19 +12,19 @@
 
 .container {
   max-width: 100%;
-  padding: 15vh 0;
+  padding: 6rem 0;
   padding-left: 1rem;
   padding-right: 1rem;
   margin-left: 0;
 
-  &.fluid {
-    max-width: 37rem;
-  }
-
   @media (min-width: $medium-breakpoint) {
-    padding: 20vh 0;
+    padding: 9rem 0;
     max-width: 70%;
     margin: auto;
+
+    &.fluid {
+      max-width: 80% !important;
+    }
   }
 }
 
