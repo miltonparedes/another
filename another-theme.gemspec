@@ -2,8 +2,8 @@
 
 Gem::Specification.new do |spec|
   spec.name          = "another-theme"
-  spec.version       = "0.1.0"
-  spec.authors       = ["miltonolaf"]
+  spec.version       = "0.0.1"
+  spec.authors       = ["Milton Olaf P"]
   spec.email         = ["hey@miltonolaf.com"]
 
   spec.summary       = "Another theme for Jekyll"

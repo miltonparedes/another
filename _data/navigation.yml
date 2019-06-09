@@ -1,0 +1,16 @@
+blog:
+  title: Blog
+  url: blog
+  target: _self
+
+projects:
+  title: Projects
+  url: projects
+  target: _self
+
+# External link
+source:
+  title: Source
+  type: external
+  url: https://github.com/miltonolaf/glitch-jekyll
+  target: _blank
