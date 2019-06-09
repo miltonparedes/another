@@ -21,9 +21,12 @@
 
       }
 
-      &:first-child::before {
-        content: "~/";
-      }
+      &:first-child{
+        padding-left: 0;
+        &::before {
+          content: "~/";
+        }
+      } 
     }
   }
 }
