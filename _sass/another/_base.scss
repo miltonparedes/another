@@ -73,14 +73,14 @@ table {
   margin-bottom: 1rem;
   width: 100%;
   font-size: 85%;
-  border: 1px solid #e5e5e5;
+  border: 1px solid rgba(var(--rgb-primary), 0.3);
   border-collapse: collapse;
 }
 
 td,
 th {
   padding: 0.25rem 0.5rem;
-  border: 1px solid #e5e5e5;
+  border: 1px solid rgba(var(--rgb-primary), 0.1);
 }
 
 th {
@@ -89,5 +89,5 @@ th {
 
 tbody tr:nth-child(odd) td,
 tbody tr:nth-child(odd) th {
-  background-color: #f9f9f9;
+  background-color: rgba(var(--rgb-primary), 0.045);
 }
