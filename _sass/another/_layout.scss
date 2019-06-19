@@ -16,13 +16,12 @@
 
 .container {
   max-width: 100%;
-  padding: 6rem 0;
   padding-left: 1rem;
   padding-right: 1rem;
   margin-left: 0;
 
   @media (min-width: $small-breakpoint) {
-    padding: 9rem 0;
+    padding: 0;
     max-width: 70%;
     margin: auto;
 
@@ -35,42 +34,5 @@
     &.fluid {
       max-width: 70% !important;
     }
-  }
-}
-
-#light,
-#dark {
-  display: block;
-  position: absolute;
-  cursor: pointer;
-  border-bottom: none;
-  margin: 2rem 1rem;
-  right: 0;
-
-  svg {
-    width: 1.333rem;
-    height: 1.333rem;
-  }
-
-  &:hover {
-    color: inherit;
-  }
-
-  @media (min-width: $medium-breakpoint) {
-    margin: 2rem;
-  }
-}
-
-#light {
-  display: none;
-}
-
-[data-theme="dark"] {
-  #light {
-    display: block;
-  }
-
-  #dark {
-    display: none;
   }
 }
