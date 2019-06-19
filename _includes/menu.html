@@ -3,7 +3,7 @@
     {% assign sorted_pages = site.pages | sort: "priority" %}
     {% for node in sorted_pages %}
       {% if node.priority %}
-      <li class="{% if node.title == page.title %}active{% endif %}"><a href="{{ site.url }}{{ node.url }}">{{ node.title }}</a></li>
+      <li {% if node.title == page.title %}class="active"{% endif %}><a href="{{ site.url }}{{ node.url }}">{{ node.title }}</a></li>
       {% endif %}
     {% endfor %}
   </ul>
