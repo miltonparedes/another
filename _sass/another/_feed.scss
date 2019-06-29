@@ -27,10 +27,10 @@
       }
 
       .post-title {
-        @include properties($body-md);
+        @include properties($body-sm);
 
         @media (min-width: $medium-breakpoint) {
-          @include properties($body-lg);
+          @include properties($body-md);
         }
       }
 
