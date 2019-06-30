@@ -1,10 +1,10 @@
-<h2 class="mt-lg">Recent posts</h2>
+<h2 class="mt-5">Recent posts</h2>
 <ul class="posts-feed">
 {% for post in site.posts | limit:5 %}
   <li class="post-node">
     <a href="{{ site.url }}{{ post.url }}" class="post-link">
       <span class="post-title">{{ post.title }}</span>
-      <time class="post-date">{{ post.date | date: "%B %d, %Y" }}</time> 
+      <time class="post-date">{{ post.date | date: "%B %d, %Y" }}</time>
     </a>
   </li>
 {% endfor %}

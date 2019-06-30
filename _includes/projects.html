@@ -1,10 +1,10 @@
-<h2 class="mt-lg">Selected projects</h2>
+<h2 class="mt-5">Selected projects</h2>
 <ul class="posts-feed">
 {% for project in site.data.projects | limit:5 %}
   <li class="post-node">
     <a href="{{ post.url }}" class="post-link" style="justify-content: normal">
       <span class="post-title">{{ project.name }}</span>
-      <span class="post-date">{{ project.description }}</span> 
+      <span class="post-date">{{ project.description }}</span>
     </a>
   </li>
 {% endfor %}
