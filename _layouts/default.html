@@ -5,13 +5,17 @@ layout: compress
 <html lang="en" data-theme="light">
   {% include head.html %}
   <body>
-    <header class="page-header">
-      {% include menu.html %}
-      {% include dark-mode.html %}
-    </header>
-    <div class="content">
-      <div class="container {% if page.fluid or layout.fluid %}fluid{% endif %}">
-        {{ content }}
+    <div class="container">
+      <header class="page-header justify-content-between">
+        {% include menu.html %}
+        {% include dark-mode.html %}
+      </header>
+    </div>
+    <div class="container">
+      <div class="row {% if page.layout == 'post' %}justify-content-center{% endif %}">
+          <div class="col-12 col-md-10 col-lg-9 col-xl-7">
+            {{ content }}
+          </div>
       </div>
     </div>
 
