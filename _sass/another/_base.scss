@@ -8,6 +8,13 @@
   box-sizing: border-box;
 }
 
+::selection {
+  color: #fff;
+  color: var(--bg-color);
+  background-color: #171717;
+  background-color: var(--primary-color);
+}
+
 html,
 body {
   margin: 0;
