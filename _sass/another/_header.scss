@@ -15,21 +15,10 @@
       margin-right: 0.65rem;
 
       a{
+        font-weight: 600;
+        color: var(--primary-color);
         border-bottom: 0;
-        font-family: $code-font-family;
-        font-weight: 400;
-        font-size: 0.85rem;
         text-transform: lowercase;
-
-      }
-
-      &:first-child{
-        &::before {
-          content: "~/";
-          font-family: $code-font-family;
-          font-weight: 600;
-          font-size: 0.85rem;
-        }
       }
     }
   }
