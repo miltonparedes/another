@@ -31,6 +31,12 @@
   border-bottom: none;
   margin-top: 0.1em;
 
+  @include media-breakpoint-up(lg) {
+    position: absolute;
+    top: 1.5rem;
+    right: 1.5rem;
+  }
+
   svg {
     width: 1.333rem;
     height: 1.333rem;
