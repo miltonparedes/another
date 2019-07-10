@@ -15,10 +15,9 @@
       margin-right: 0.65rem;
 
       a{
-        font-weight: 600;
+        @include properties($heading-xs);
         color: var(--primary-color);
         border-bottom: 0;
-        text-transform: lowercase;
       }
     }
   }
