@@ -1,0 +1,29 @@
+footer {
+  ul {
+    margin: 0;
+    li {
+      display: inline;
+      list-style: none;
+      margin-right: 0.65rem;
+
+      a{
+        @include properties($heading-xs);
+        color: var(--primary-color);
+        border-bottom: 0;
+      }
+    }
+  }
+
+  .social {
+    text-align: right;
+  }
+  .menu{
+    ul {
+      li{
+        a{
+          font-weight: 300;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,29 @@
+<footer class="mb-5 mt-5">
+<div class="container">
+  <div class="row justify-content-end">
+    <nav class="col-auto mb-2 mb-sm-0 menu">
+      <ul>
+        {% assign sorted_pages = site.pages | sort: "priority" %}
+        {% for node in sorted_pages %}
+          {% if node.priority %}
+          <li><a href="{{ site.url }}{{ node.url }}">{{ node.title }}</a></li>
+          {% endif %}
+        {% endfor %}
+      </ul>
+    </nav>
+    <nav class="col-auto social">
+      <ul>
+        {%- if site.social.twitter -%}
+          <li><a href="//twitter.com/{{ site.social.twitter }}">Twitter</a></li>
+        {%- endif -%}
+        {%- if site.social.github -%}
+          <li><a href="//github.com/{{ site.social.twitter }}">GitHub</a></li>
+        {%- endif -%}
+        {%- if site.social.facebook -%}
+          <li><a href="//facebook.com/{{ site.social.twitter }}">Facebook</a></li>
+        {%- endif -%}
+      </ul>
+    </nav>
+  </div>
+</div>
+</footer>
