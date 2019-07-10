@@ -6,21 +6,16 @@ layout: compress
   {% include head.html %}
   <body>
     <div class="container">
-      <header class="page-header justify-content-between mt-sm-0 mt-lg-5 mb-n4">
+      <header class="page-header justify-content-between mt-sm-0 mt-lg-4 mb-n3 mb-md-0">
         {% include menu.html %}
         {% include dark-mode.html %}
       </header>
     </div>
-    <div class="container">
-      <div class="row {% if page.layout == 'post' %}justify-content-center{% endif %}">
-          <div class="col-12 col-md-10 col-lg-9 col-xl-7">
-            {{ content }}
-          </div>
-      </div>
-    </div>
+    {{ content }}
 
     {% if dark_mode %}
       <script src="{{ site.url }}/assets/js/main.js" charset="utf-8"></script>
     {% endif %}
   </body>
+  {% include footer.html %}
 </html>
