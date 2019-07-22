@@ -27,6 +27,11 @@ h5,
 h6,
 .heading-sm { @include properties($heading-sm); }
 
+.body-lg { @include properties($body-lg); }
+.body-md { @include properties($body-md); }
+.body-sm { @include properties($body-sm); }
+.body-xs { @include properties($body-xs); }
+
 .end {
   text-align: end;
 }
@@ -93,11 +98,12 @@ dd {
 }
 
 hr {
-  position: relative;
-  margin: 1.5rem 0;
+  opacity: 0.085;
   border: 0;
-  border-top: 1px solid #eee;
-  border-bottom: 1px solid #fff;
+  margin: 0;
+  width: 100%;
+  height: 1px;
+  background-color: currentColor;
 }
 
 abbr {
