@@ -1,0 +1,55 @@
+<script src="https://cdn.jsdelivr.net/npm/algoliasearch@3.33.0/dist/algoliasearchLite.min.js" integrity="sha256-3Laj91VXexjTlFLgL8+vvIq27laXdRmFIcO2miulgEs=" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/instantsearch.js@3.4.0/dist/instantsearch.production.min.js" integrity="sha256-pM0n88cBFRHpSn0N26ETsQdwpA7WAXJDvkHeCLh3ujI=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.20.1/moment.min.js"></script>
+
+<script>
+const search = instantsearch({
+  indexName: '{{ site.algolia.index_name }}',
+  searchClient: algoliasearch('{{ site.algolia.application_id }}', '{{ site.algolia.search_only_api_key }}'),
+});
+
+search.addWidget(
+  instantsearch.widgets.searchBox({
+    container: '#searchbox',
+    placeholder: 'Search...',
+    showReset: true,
+    showLoadingIndicator: false,
+  })
+);
+
+search.addWidget(
+  instantsearch.widgets.hits({
+    container: '#hits',
+    templates: {
+      item(hit) {
+        let url = `{{ site.url }}${hit.url}`;
+        let date = moment.unix(hit.date).format('MMMM DD, YYYY');
+        return `
+          <a class="post-link" href="${url}">
+            <span class="post-title">${hit.title}</span>
+            <time class="post-date">${date}</time>
+          </a>
+        `;
+      },
+    },
+  })
+);
+
+search.addWidget(
+  instantsearch.widgets.pagination({
+    container: '#pagination',
+    showPrevious: true,
+    showNext: true,
+    totalPages: 2
+  })
+);
+
+search.addWidget(
+  instantsearch.widgets.poweredBy({
+    container: '.ais-PoweredBy',
+    theme: 'dark',
+  })
+);
+
+search.start();
+</script>
