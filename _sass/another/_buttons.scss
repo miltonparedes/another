@@ -1,0 +1,17 @@
+.btn {
+  margin: 2px;
+  background: rgba(var(--rgb-primary), 0.06);
+  color: rgba(var(--rgb-primary), 0.6);
+  padding: 2px;
+  border-radius: 5px;
+
+  &:hover, &:active, &.active {
+    background: rgba(var(--rgb-primary), 0.1);
+    color: rgba(var(--rgb-primary), 0.6);
+    font-weight: 600;
+  }
+
+  &.disabled, &:disabled {
+    opacity: 0.5;
+  }
+}
