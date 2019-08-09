@@ -9,6 +9,12 @@ const search = instantsearch({
 });
 
 search.addWidget(
+  instantsearch.widgets.configure({
+    hitsPerPage: 5
+  })
+);
+
+search.addWidget(
   instantsearch.widgets.searchBox({
     container: '#searchbox',
     placeholder: 'Search...',
