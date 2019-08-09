@@ -6,6 +6,7 @@
 const search = instantsearch({
   indexName: '{{ site.algolia.index_name }}',
   searchClient: algoliasearch('{{ site.algolia.application_id }}', '{{ site.algolia.search_only_api_key }}'),
+  routing: true
 });
 
 search.addWidget(
@@ -29,11 +30,14 @@ search.addWidget(
     templates: {
       item(hit) {
         let url = `{{ site.url }}${hit.url}`;
-        let date = moment.unix(hit.date).format('MMMM DD, YYYY');
+        let date = moment.unix(hit.date).format('MMM DD, YYYY');
         return `
-          <a class="post-link" href="${url}">
-            <span class="post-title">${hit.title}</span>
-            <time class="post-date">${date}</time>
+          <a class="post-link row justify-content-between" href="${url}">
+            <div class="post-title col-12 col-md-9 col-xl-10 fw-600">${hit.title}</div>
+            <time class="post-date col-12 col-md-3 col-xl-2 text-md-right">${date}</time>
+            <div class="body-md mt-2 col-12 col-md-11 col-xl-9">
+              ${hit.excerpt_text}
+            </div>
           </a>
         `;
       },

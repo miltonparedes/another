@@ -2,25 +2,11 @@
   margin-bottom: 0.5rem;
 
   .post-node, .ais-Hits-item {
-    font-weight: 400;
     border-bottom: 1px solid rgba(var(--rgb-primary), 0.055);
 
     .post-link {
-      display: -webkit-box;
-      display: -webkit-flex;
-      display: -ms-flexbox;
-      display: flex;
-      flex-direction: column;
       border-bottom: 0;
       padding: 1rem 0;
-
-      @media (min-width: $medium-breakpoint) {
-        flex-direction: row !important;
-        -webkit-align-items: center;
-        -webkit-box-align: center;
-        -ms-flex-align: center;
-        align-items: center;
-      }
 
       .post-title {
         @include properties($body-sm);
@@ -32,13 +18,7 @@
 
       .post-date {
         @include properties($body-xs);
-        margin-left: 0;
         opacity: 0.75;
-
-        @media (min-width: $medium-breakpoint) {
-          @include properties($body-sm);
-          margin-left: 1rem;
-        }
       }
     }
   }
@@ -141,4 +121,63 @@
   path:first-child, path:last-child {
     fill: currentColor !important;
   }
+}
+
+.ais-Pagination {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+.ais-Pagination-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  list-style: none;
+  padding: 0;
+  margin: 0 auto;
+  margin-top: -2px;
+  margin-bottom: -2px;
+}
+
+.ais-Pagination-item {
+  display: block;
+  margin: 2px;
+  background: rgba(var(--rgb-primary), 0.06);
+  color: rgba(var(--rgb-primary), 0.6);
+  padding: 2px;
+  border-radius: 5px;
+}
+
+.ais-Pagination-item--selected {
+  background: rgba(var(--rgb-primary), 0.1);
+  color: rgba(var(--rgb-primary), 0.6);
+  font-weight: 600;
+}
+
+.ais-Pagination-item--disabled {
+  opacity: 0.5;
+}
+
+.ais-Pagination-link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  background-color: transparent;
+  color: inherit;
+  width: 32px;
+  height: 32px;
+  text-decoration: none;
+  border: 0;
+  font-size: 12px;
 }
