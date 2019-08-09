@@ -239,6 +239,17 @@ $utilities: map-merge(
       property: padding-left,
       class: pl,
       values: $spacers
+    ),
+    "text-align": (
+      responsive: true,
+      property: text-align,
+      class: text,
+      values: left right center justify
+    ),
+    "font-weight": (
+      property: font-weight,
+      class: fw,
+      values: 600 400 300
     )
   ),
   $utilities
