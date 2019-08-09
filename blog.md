@@ -1,5 +1,5 @@
 ---
 layout: algolia-feed
-title: Algolia
+title: Blog
 priority: 3
 ---
