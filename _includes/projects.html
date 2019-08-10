@@ -3,9 +3,9 @@
 <ul class="posts-feed">
 {% for project in site.data.projects | limit:5 %}
   <li class="post-node">
-    <a href="{{ post.url }}" class="post-link" style="justify-content: normal">
-      <span class="post-title">{{ project.name }}</span>
-      <span class="post-date">{{ project.description }}</span>
+    <a href="{{ post.url }}" class="post-link row align-items-center">
+      <span class="post-title col-auto pr-0">{{ project.name }}</span>
+      <span class="post-date col-auto">{{ project.description }}</span>
     </a>
   </li>
 {% endfor %}
