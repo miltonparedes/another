@@ -42,6 +42,17 @@ algolia:
   index_name: another-jekyll
   search_only_api_key: a53c7f9c8141b850e2cce55dad73eb3b
 
+defaults:
+  -
+    scope:
+      type: "pages"
+    values:
+      layout: "page"
+      page_title: true
+      content_width: "default"
+      post_content: true
+
+
 plugins:
   - jekyll-feed
   - jekyll-seo-tag
