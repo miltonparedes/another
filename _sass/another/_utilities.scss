@@ -250,6 +250,12 @@ $utilities: map-merge(
       property: font-weight,
       class: fw,
       values: 600 400 300
+    ),
+    "border-bottom": (
+      property: border-bottom,
+      values: (
+        0: 0,
+      )
     )
   ),
   $utilities
