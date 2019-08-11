@@ -1,40 +1,50 @@
-.page-header {
-  display: flex;
-  padding: 2rem 0;
+@include media-breakpoint-down(sm) {
+  #menu {
+    left: -150px;
+    position: fixed;
+    -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+            box-sizing: border-box;
 
-  @include media-breakpoint-down(md) {
-    margin-bottom: 0rem;
+    -webkit-transition: all .3s ease-in;
+      -moz-transition: all .3s ease-in;
+        -o-transition: all .3s ease-in;
+            transition: all .3s ease-in;
+  }
+  body.open #menu {
+    left: 0;
+  }
+  /* MAIN PAGE */
+  .page-wrap {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+
+    -webkit-transition: all .3s ease-in;
+    -moz-transition: all .3s ease-in;
+    -o-transition: all .3s ease-in;
+    transition: all .3s ease-in;
+  }
+
+  body.open .page-wrap {
+    margin-left:  150px;
   }
 }
-.nav-menu {
-  ul {
-    margin: 0;
-    li {
-      display: inline;
-      list-style: none;
-      margin-right: 0.65rem;
 
-      a{
-        @include properties($heading-xs);
-        color: var(--primary-color);
-        border-bottom: 0;
-      }
-    }
+#menu-toggle {
+  display: none;
+
+  @include media-breakpoint-down(sm) {
+    display: block;
   }
 }
+
 
 #light,
 #dark {
   display: block;
   cursor: pointer;
   border-bottom: none;
-  margin-top: 0.1em;
-
-  @include media-breakpoint-up(lg) {
-    position: absolute;
-    top: 1.5rem;
-    right: 1.5rem;
-  }
 
   svg {
     width: 1.333rem;

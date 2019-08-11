@@ -6,12 +6,14 @@ layout: compress
   {% include head.html %}
   <body>
     <div class="container">
-      <header class="page-header justify-content-between mt-sm-0 mt-lg-4 mb-n3 mb-md-0">
-        {% include menu.html %}
-        {% include dark-mode.html %}
-      </header>
+      <div class="row">
+        <aside  id="menu" role="navigation" class="col-12 col-md-2 d-flex flex-column justify-content-around" style="height: 100vh;">
+          {% include menu.html %}
+          {% include dark-mode.html %}
+        </aside>
+        {{ content }}
+      </div>
     </div>
-    {{ content }}
 
     {% if dark_mode %}
       <script src="{{ site.url }}/assets/js/main.js" charset="utf-8"></script>
