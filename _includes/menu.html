@@ -1,9 +1,9 @@
-<nav class="nav-menu">
-  <ul>
+<nav class="col-auto">
+  <ul class="d-flex flex-column">
     {% assign sorted_pages = site.pages | sort: "priority" %}
     {% for node in sorted_pages %}
       {% if node.priority %}
-      <li {% if node.title == page.title %}class="active"{% endif %}><a href="{{ site.url }}{{ node.url }}">{{ node.title }}</a></li>
+      <li class="mt-2{% if node.title == page.title %} active{% endif %}""><a class="body-lg fw-600 border-bottom-0" href="{{ site.url }}{{ node.url }}">{{ node.title }}</a></li>
       {% endif %}
     {% endfor %}
   </ul>
