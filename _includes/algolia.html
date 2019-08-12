@@ -31,13 +31,22 @@ search.addWidget(
       item(hit) {
         let url = `{{ site.url }}${hit.url}`;
         let date = moment.unix(hit.date).format('MMM DD, YYYY');
+        let cover = '';
+        let excerpt_text = '';
+        if(hit.cover){
+          cover = '<img class="w-100 mb-0.5 mb-sm-0" src="' + hit.cover + '" alt="' + hit.title + '">';
+          excerpt_text = '<p class="body-md mt-1">' + hit.excerpt_text + '</p>';
+        }
         return `
           <a class="post-link row justify-content-between" href="${url}">
-            <div class="post-title col-12 col-md-9 col-xl-10 fw-600">${hit.title}</div>
-            <time class="post-date col-12 col-md-3 col-xl-2 text-md-right">${date}</time>
-            <div class="body-md mt-2 col-12 col-md-11 col-xl-9">
-              ${hit.excerpt_text}
+            <div class="col-6 col-sm-4 col-md-3 col-xl-2">
+              ${cover}
             </div>
+            <div class="post-title col-12 col-sm-8 col-md-9 col-xl-8">
+             <span class="fw-600">${hit.title}</span>
+              ${excerpt_text}
+            </div>
+            <time class="post-date col-12 col-md-3 col-xl-2 text-md-right">${date}</time>
           </a>
         `;
       },
