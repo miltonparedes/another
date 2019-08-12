@@ -34,7 +34,7 @@ search.addWidget(
         let cover = '';
         let excerpt_text = '';
         if(hit.cover){
-          cover = '<img class="w-100 mb-0.5 mb-sm-0" src="' + hit.cover + '" alt="' + hit.title + '">';
+          cover = '<img class="w-100 mb-0.5 mb-sm-0" src="{{ site.url }}' + hit.cover + '" alt="' + hit.title + '">';
           excerpt_text = '<p class="body-md mt-1">' + hit.excerpt_text + '</p>';
         }
         return `
