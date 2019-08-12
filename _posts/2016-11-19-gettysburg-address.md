@@ -1,11 +1,11 @@
 ---
 layout: post
-cover: /assets/img/bus.jpg
+cover: /assets/img/cover_posts/2016-11-19-gettysburg-address.jpg
 title: Gettysburg Address
 date: 2016-11-19 10:18:00
 description:  Write a short, very short description of your post here, for the search engine.
 categories: junk
-tags: science world math 
+tags: science world math
 comments: false
 ---
 

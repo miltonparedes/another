@@ -1,6 +1,7 @@
 ---
 layout: post
-cover: /assets/img/sky.jpg
+cover: /assets/img/cover_posts/2018-03-08-i-have-a-dream.jpg
+
 title: I Have a Dream
 date: 2018-03-08 10:18:00
 description:  Write a short, very short description of your post here, for the search engine.
@@ -64,9 +65,9 @@ With this faith, we will be able to hew out of the mountain of despair a stone o
 And this will be the day -- this will be the day when all of God's children will be able to sing with new meaning:
 
 >  My country 'tis of thee, sweet land of liberty, of thee I sing.
->  
+>
 >  Land where my fathers died, land of the Pilgrim's pride,
->  
+>
 >  From every mountainside, let freedom ring!
 
 
@@ -75,22 +76,22 @@ And if America is to be a great nation, this must become true.
 And so let freedom ring from the prodigious hilltops of New Hampshire.
 
 >  Let freedom ring from the mighty mountains of New York.
->  
+>
 >  Let freedom ring from the heightening Alleghenies of Pennsylvania.
->  
+>
 >  Let freedom ring from the snow-capped Rockies of Colorado.
->  
+>
 >  Let freedom ring from the curvaceous slopes of California.
 
 
 But not only that:
 
 >  Let freedom ring from Stone Mountain of Georgia.
->  
+>
 >  Let freedom ring from Lookout Mountain of Tennessee.
->  
+>
 >  Let freedom ring from every hill and molehill of Mississippi.
->  
+>
 >  From every mountainside, let freedom ring.
 
 

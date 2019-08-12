@@ -1,6 +1,6 @@
 ---
 layout: post
-cover: /assets/img/2.jpg
+cover: /assets/img/cover_posts/2014-08-12-the-businessman-and-fisherman.jpg
 title: The Businessman & The Fisherman
 date: 2014-08-12 10:18:00
 description:  Write a short, very short description of your post here, for the search engine.

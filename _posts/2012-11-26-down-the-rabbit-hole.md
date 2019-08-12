@@ -1,6 +1,7 @@
 ---
 layout: post
-cover: '/assets/img/piano.jpg'
+cover: /assets/img/cover_posts/2012-11-26-down-the-rabbit-hole.jpg
+
 title: Down The Rabbit Hole
 date: 2012-11-26 10:18:00
 description:  Write a short, very short description of your post here, for the search engine.

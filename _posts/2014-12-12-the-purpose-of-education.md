@@ -1,6 +1,5 @@
 ---
 layout: post
-cover: /assets/img/grapes.jpg
 title: The Purpose of Education
 date: 2014-12-12 10:18:00
 description:  Write a short, very short description of your post here, for the search engine.
