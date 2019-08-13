@@ -38,15 +38,19 @@ search.addWidget(
           excerpt_text = '<p class="body-md mt-1">' + hit.excerpt_text + '</p>';
         }
         return `
-          <a class="post-link row justify-content-between" href="${url}">
+          <a class="post-link row" href="${url}">
             <div class="col-6 col-sm-4 col-md-3 col-xl-2">
               ${cover}
             </div>
-            <div class="post-title col-12 col-sm-8 col-md-9 col-xl-8">
-             <span class="fw-600">${hit.title}</span>
-              ${excerpt_text}
+            <div class="col-12 col-sm-8 col-md-9 col-xl-10">
+              <div class="row">
+                <div class="post-title col-12 col-lg-9 col-xl-10">
+                  <span class="fw-600">${hit.title}</span>
+                  ${excerpt_text}
+                </div>
+                <time class="post-date col-12 col-lg-3 col-xl-2 text-lg-right">${date}</time>
+              </div>
             </div>
-            <time class="post-date col-12 col-md-3 col-xl-2 text-md-right">${date}</time>
           </a>
         `;
       },
