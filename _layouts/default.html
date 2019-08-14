@@ -6,8 +6,12 @@ layout: compress
   {% include head.html %}
   <body>
     <div class="container">
+    <button id="menu-toggle" class="btn">
+      {%- include icons.html icon="menu" class="menu" size=24 -%}
+      {%- include icons.html icon="close" class="close" size=24 -%}
+    </button>
       <div class="row">
-        <aside  id="menu" role="navigation" class="col-12 col-md-2 d-flex flex-column px-0 justify-content-around" style="height: 100vh;">
+        <aside  id="menu" role="navigation" class="col-6 col-md-2 d-flex flex-column px-0 justify-content-around" style="height: 100vh;">
           {% include menu.html %}
           {% include dark-mode.html %}
         </aside>

@@ -32,24 +32,49 @@
 }
 
 #menu-toggle {
+  position: absolute;
   display: none;
+  left: 0;
+  z-index: 1;
+  background: transparent;
+  margin: 15px;
+  padding: 0;
 
   @include media-breakpoint-down(lg) {
     display: block;
   }
+
+  .menu {
+    display: block;
+  }
+
+  .close {
+    display: none;
+  }
 }
 
+.open #menu-toggle {
+  position: fixed !important;
+
+  .menu {
+    display: none;
+  }
+
+  .close {
+    display: block;
+  }
+}
+
+.menu-separator {
+  width: 60%;
+  opacity: 0.1;
+}
 
 #light,
 #dark {
   display: block;
   cursor: pointer;
   border-bottom: none;
-
-  svg {
-    width: 1.333rem;
-    height: 1.333rem;
-  }
 
   &:hover {
     color: inherit;
