@@ -3,6 +3,7 @@ layout: page
 title: Another
 priority: 0
 page_title: false
+post_content: false
 ---
 
 # Another Theme for Jekyll

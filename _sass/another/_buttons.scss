@@ -1,17 +1,39 @@
 .btn {
+  display: inline-block;
+  margin: .25em 0;
+  padding: .5rem 1rem;
+  text-decoration: none;
+  text-align: center;
   margin: 2px;
   background: rgba(var(--rgb-primary), 0.06);
   color: rgba(var(--rgb-primary), 0.6);
-  padding: 2px;
   border-radius: 5px;
+  border: 0;
 
-  &:hover, &:active, &.active {
+  @include properties($body-md);
+
+  &:hover, &:active {
     background: rgba(var(--rgb-primary), 0.1);
     color: rgba(var(--rgb-primary), 0.6);
+    outline: none;
+  }
+
+  &.active {
     font-weight: 600;
   }
 
   &.disabled, &:disabled {
     opacity: 0.5;
+  }
+
+  .icon {
+    margin: 0 4px 0 0;
+    stroke: currentColor;
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    fill: none;
+    top: 2px;
+    position: relative;
   }
 }
