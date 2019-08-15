@@ -65,9 +65,9 @@ $heading-xs: (
 );
 
 $body-lg: (
-  font-size: 18px,
+  font-size: 18px !important,
   font-weight: 400,
-  letter-spacing: -0.014em,
+  letter-spacing: -0.014em !important,
   line-height: 25px,
 );
 

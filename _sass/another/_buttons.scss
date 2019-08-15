@@ -1,5 +1,5 @@
 .btn {
-  display: inline-block;
+  display: inline-flex;
   margin: .25em 0;
   padding: .5rem 1rem;
   text-decoration: none;
@@ -12,7 +12,7 @@
 
   @include properties($body-md);
 
-  &:hover, &:active {
+  &:hover, &:active, &:focus {
     background: rgba(var(--rgb-primary), 0.1);
     color: rgba(var(--rgb-primary), 0.6);
     outline: none;
@@ -36,4 +36,16 @@
     top: 2px;
     position: relative;
   }
+
+  &.btn-nav{
+    padding: 0;
+    margin: 0;
+    border-bottom: none;
+    background: transparent;
+    color: inherit;
+    &:hover, &:active, &:focus {
+      color: rgb(var(--rgb-primary), 0.75) !important;
+    }
+  }
+
 }

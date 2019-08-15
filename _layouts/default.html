@@ -6,12 +6,16 @@ layout: compress
   {% include head.html %}
   <body>
     <div class="container">
-    <button id="menu-toggle" class="btn">
-      {%- include icons.html icon="menu" class="menu" size=24 -%}
-      {%- include icons.html icon="close" class="close" size=24 -%}
-    </button>
+      <div class="menu-toggle--btn-container">
+        <button class="menu-toggle open btn btn-nav body-lg fw-600 mt-3" title="Open Menu">
+            {%- include icons.html icon="menu" size=17 -%} Menu
+        </button>
+        <button class="menu-toggle close btn btn-nav body-lg fw-600 mt-3" title="Close Menu">
+            {%- include icons.html icon="close" size=17 -%} Close
+        </button>
+      </div>
       <div class="row">
-        <aside  id="menu" role="navigation" class="col-6 col-md-2 d-flex flex-column px-0 justify-content-around" style="height: 100vh;">
+        <aside  id="menu" role="navigation" class="col-xl-2 row flex-column justify-content-around">
           {% include menu.html %}
           {% include dark-mode.html %}
         </aside>

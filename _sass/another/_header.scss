@@ -1,5 +1,10 @@
+#menu {
+  height: 100vh;
+}
+
 @include media-breakpoint-down(lg) {
   #menu {
+    width: 200px;
     left: -200px;
     position: fixed;
     -webkit-box-sizing: border-box;
@@ -31,21 +36,20 @@
   }
 }
 
-#menu-toggle {
+.menu-toggle--btn-container {
   position: absolute;
-  display: none;
-  left: 0;
+  left: 3.333333333%;
   z-index: 1;
   background: transparent;
-  margin: 15px;
+  margin: 0;
   padding: 0;
 
-  @include media-breakpoint-down(lg) {
-    display: block;
-  }
+  .open {
+    display: none;
 
-  .menu {
-    display: block;
+    @include media-breakpoint-down(lg) {
+      display: block;
+    }
   }
 
   .close {
@@ -53,14 +57,14 @@
   }
 }
 
-.open #menu-toggle {
+.open .menu-toggle {
   position: fixed !important;
 
-  .menu {
+  &.open {
     display: none;
   }
 
-  .close {
+  &.close {
     display: block;
   }
 }
@@ -74,7 +78,6 @@
 #dark {
   display: block;
   cursor: pointer;
-  border-bottom: none;
 
   &:hover {
     color: inherit;
