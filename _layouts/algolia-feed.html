@@ -13,21 +13,25 @@ layout: page
 <ul class="posts-feed my-3" id="hits">
   {% for post in site.posts  limit: 8 %}
     <li class="post-node">
-      <a class="post-link row" href="{{ post.url | relative_url }}">
-        <div class="col-6 col-sm-4 col-md-3 col-xl-2">
+      <a class="post-link row {% unless post.cover %}py-3{% endunless %}" href="{{ post.url | relative_url }}">
+        <div class="col-12 col-sm-4 col-md-3 col-xl-2">
           {%- if post.cover -%}
             <img class="w-100 mb-0.5 mb-sm-0" src="{{ site.url }}{{ post.cover }}" alt="{{ post.title }}">
           {%- endif -%}
         </div>
-        <div class="post-title col-12 col-sm-8 col-md-9 col-xl-8">
-          <span class="fw-600">{{ post.title }}</span>
-          {%- if post.cover -%}
-          <p class="body-md mt-1">
-            {{ post.excerpt | strip_html }}
-          </p>
-          {%- endif -%}
+        <div class="col-12 col-sm-8 col-md-9 col-xl-10 pl-0">
+          <div class="row">
+            <div class="post-title col-12 col-lg-9 col-xl-10">
+              <span class="fw-600">{{ post.title }}</span>
+              {%- if post.cover -%}
+              <p class="body-md mt-1">
+                {{ post.excerpt | strip_html }}
+              </p>
+              {%- endif -%}
+            </div>
+            <time class="post-date col-12 col-lg-3 col-xl-2 text-lg-right">{{ post.date | date: "%b %d, %Y" }}</time>
+          </div>
         </div>
-        <time class="post-date col-auto col-lg-3 col-xl-2 text-md-right">{{ post.date | date: "%b %d, %Y" }}</time>
       </a>
     </li>
   {% endfor %}
