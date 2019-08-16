@@ -21,11 +21,11 @@ layout: compress
         </aside>
         {{ content }}
       </div>
+      {% include footer.html %}
     </div>
 
     {% if dark_mode %}
       <script src="{{ site.url }}/assets/js/main.js" charset="utf-8"></script>
     {% endif %}
   </body>
-  {% include footer.html %}
 </html>
