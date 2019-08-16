@@ -2,7 +2,7 @@
 <ul class="row">
   {%- for social in site.social -%}
     {%- assign social_icon = social[0] -%}
-    <li class="col-auto">
+    <li class="col-auto pr-0">
       <a href="//{{social_icon}}.com/{{social[1]}}" class="border-bottom-0">
       {%- include icons.html icon=social_icon size=17 -%}
       </a>

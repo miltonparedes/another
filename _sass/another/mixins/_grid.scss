@@ -6,6 +6,11 @@
   width: 93.3333333333%;
   margin-right: auto;
   margin-left: auto;
+
+  @include media-breakpoint-down(lg) {
+    width: 100%;
+    padding: 0 15px;
+  }
 }
 
 @mixin make-row($gutter: $grid-gutter-width) {
