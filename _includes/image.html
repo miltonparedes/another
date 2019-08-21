@@ -1,0 +1,16 @@
+{%- assign class = "" -%}
+{%- if include.class -%}
+  {%- assign class = include.class -%}
+{%- endif -%}
+
+{%- assign legend = "" -%}
+{%- if include.legend -%}
+  {%- assign legend = include.legend -%}
+{%- endif -%}
+
+<figure class="m-0 d-lg-flex">
+<img src="{{include.src}}" alt="sad" class="w-100 {{class}}">
+<legend class="footnote-aside body-sm mb-1 mt-md-3">
+  {{ legend }}
+</legend>
+</figure>
