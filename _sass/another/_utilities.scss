@@ -13,7 +13,7 @@ $utilities: map-merge(
       print: true,
       property: display,
       class: d,
-      values: none block flex
+      values: none block flex inline
     ),
     // Flex utilities
     "flex": (
