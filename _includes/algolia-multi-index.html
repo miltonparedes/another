@@ -1,0 +1,196 @@
+<script src="https://cdn.jsdelivr.net/npm/algoliasearch@3.33.0/dist/algoliasearchLite.min.js" integrity="sha256-3Laj91VXexjTlFLgL8+vvIq27laXdRmFIcO2miulgEs=" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/instantsearch.js@3.4.0/dist/instantsearch.production.min.js" integrity="sha256-pM0n88cBFRHpSn0N26ETsQdwpA7WAXJDvkHeCLh3ujI=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.20.1/moment.min.js"></script>
+
+<script>
+
+const searchClient = algoliasearch('{{ site.algolia.application_id }}', '{{ site.algolia.search_only_api_key }}')
+
+const subIndex = instantsearch({
+  indexName: 'notes',
+  searchClient,
+  routing: true
+});
+
+const mainIndex = instantsearch({
+  indexName: '{{ site.algolia.index_name }}',
+  searchClient,
+  searchFunction(helper) {
+    subIndex.helper.setQuery(helper.state.query).search();
+    helper.search();
+  },
+  routing: true
+});
+
+mainIndex.addWidget(
+  instantsearch.widgets.searchBox({
+    container: '#searchbox',
+    placeholder: 'Search...',
+    showReset: true,
+    showLoadingIndicator: false,
+  })
+);
+
+mainIndex.addWidget(
+  instantsearch.widgets.poweredBy({
+    container: '.ais-PoweredBy',
+    theme: 'dark',
+  })
+);
+
+mainIndex.addWidget(
+  instantsearch.widgets.configure({
+    hitsPerPage: 8
+  })
+);
+
+subIndex.addWidget(
+  instantsearch.widgets.configure({
+    hitsPerPage: 8,
+  })
+);
+
+mainIndex.addWidget(
+  instantsearch.widgets.hits({
+    container: '#hits',
+    templates: {
+      item(hit) {
+        let url = `{{ site.url }}${hit.url}`;
+        let date = moment.unix(hit.date).format('MMM DD, YYYY');
+        let cover = '';
+        let excerpt_text = '';
+        let extra_padding = 'py-3';
+        if(hit.cover){
+          cover = '<img class="w-100 mb-0.5 mb-sm-0" src="{{ site.url }}' + hit.cover + '" alt="' + hit.title + '">';
+          excerpt_text = '<p class="body-md mt-1">' + hit.excerpt_text + '</p>';
+          extra_padding = '';
+        }
+        return `
+          <a class="post-link row ${extra_padding}" href="${url}">
+            <div class="col-12 col-sm-4 col-md-3 col-xl-2">
+              ${cover}
+            </div>
+            <div class="col-12 col-sm-8 col-md-9 col-xl-10 pl-md-0">
+              <div class="row">
+                <div class="post-title col-12 col-lg-9 col-xl-10">
+                  <span class="fw-600">${hit.title}</span>
+                  ${excerpt_text}
+                </div>
+                <time class="post-date col-12 col-lg-3 col-xl-2 text-lg-right">${date}</time>
+              </div>
+            </div>
+          </a>
+        `;
+      },
+    },
+  })
+);
+
+subIndex.addWidget(
+  instantsearch.widgets.hits({
+    container: '#hits-second',
+    templates: {
+      item(hit) {
+        let url = `{{ site.url }}${hit.url}`;
+        let date = moment.unix(hit.date).format('MMM DD, YYYY');
+        let cover = '';
+        let excerpt_text = '';
+        let extra_padding = 'py-3';
+        if(hit.cover){
+          cover = '<img class="w-100 mb-0.5 mb-sm-0" src="{{ site.url }}' + hit.cover + '" alt="' + hit.title + '">';
+          excerpt_text = '<p class="body-md mt-1">' + hit.excerpt_text + '</p>';
+          extra_padding = '';
+        }
+        return `
+          <a class="post-link row ${extra_padding}" href="${url}">
+            <div class="col-12 col-sm-4 col-md-3 col-xl-2">
+              ${cover}
+            </div>
+            <div class="col-12 col-sm-8 col-md-9 col-xl-10 pl-md-0">
+              <div class="row">
+                <div class="post-title col-12 col-lg-9 col-xl-10">
+                  <span class="fw-600">${hit.title}</span>
+                  ${excerpt_text}
+                </div>
+                <time class="post-date col-12 col-lg-3 col-xl-2 text-lg-right">${date}</time>
+              </div>
+            </div>
+          </a>
+        `;
+      },
+    },
+  })
+);
+
+mainIndex.addWidget(
+  instantsearch.widgets.stats({
+    container: '#stats-mainindex',
+    templates: {
+      text(data) {
+        let count = '';
+
+        if (data.query){
+          if (data.hasManyResults) {
+            count += `(${data.nbHits})`;
+          } else if (data.hasOneResult) {
+            count += `(1)`;
+          } else {
+            count += `(0)`;
+          }
+        }
+
+        return `${count}`;
+      },
+    },
+    cssClasses: {
+      root: 'd-inline'
+    }
+  })
+);
+
+subIndex.addWidget(
+  instantsearch.widgets.stats({
+    container: '#stats-subindex',
+    templates: {
+      text(data) {
+        let count = '';
+
+        if (data.query){
+          if (data.hasManyResults) {
+            count += `(${data.nbHits})`;
+          } else if (data.hasOneResult) {
+            count += `(1)`;
+          } else {
+            count += `(0)`;
+          }
+        }
+        return `${count}`;
+      },
+    },
+    cssClasses: {
+      root: 'd-inline'
+    }
+  })
+);
+
+mainIndex.addWidget(
+  instantsearch.widgets.pagination({
+    container: '#pagination',
+    showPrevious: true,
+    showNext: true,
+    totalPages: 2
+  })
+);
+
+subIndex.addWidget(
+  instantsearch.widgets.pagination({
+    container: '#pagination-second',
+    showPrevious: true,
+    showNext: true,
+    totalPages: 2
+  })
+);
+
+subIndex.start();
+mainIndex.start();
+</script>
