@@ -9,8 +9,11 @@ fluid: true
       <time class="body-sm" datetime="{{ page.date | date: '%Y-%m-%d' }}">
         <strong>{{ page.date | date: "%B %d, %Y"}}</strong>
       </time>
+      {%- if page.cover -%}
+        {%- include image.html src=page.cover legend=page.legend class="mt-md-3 mb-md-2 mt-2" -%}
+      {%- endif -%}
     </header>
-    <section class="post-content">
+    <section>
       {{ content }}
     </section>
   </article>

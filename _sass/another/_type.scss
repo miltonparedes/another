@@ -170,6 +170,25 @@ a[href^="#fnref:"] {
   font-size: 85%;
 }
 
+.footnote-aside {
+  padding-left: .75rem;
+  padding-right: .75rem;
+  position: absolute;
+  right: 0;
+  width: 50%;
+  -webkit-transform: translateX(100%);
+  transform: translateX(100%);
+  color: rgba(var(--rgb-primary), 0.6);
+
+  @include media-breakpoint-down(md) {
+    position: relative;
+    width: 100%;
+    text-align: center;
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+
 // Custom type
 //
 // Extend paragraphs with `.lead` for larger introductory text.

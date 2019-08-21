@@ -2,6 +2,7 @@
 layout: post
 title: This post demonstrates post content styles
 cover: /assets/img/cover_posts/2019-05-23-mardown-demo.jpg
+legend: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Credit: Bob"
 ---
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce bibendum neque eget nunc mattis eu sollicitudin enim tincidunt. Vestibulum lacus tortor, ultricies id dignissim ac, bibendum in velit.
