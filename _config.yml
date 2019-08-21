@@ -24,17 +24,6 @@ favicon: favicon.png # favicon name in assets/img/
 
 permalink: /:year/:month/:title/
 
-# Compress html
-compress_html:
-  clippings: all
-  comments: ["<!-- ", " -->"]
-  endings: all
-  ignore:
-    envs: [local]
-  profile: false
-  blanklines: true
-  startings: [html, head, body]
-
 # Build settings
 markdown: kramdown
 
