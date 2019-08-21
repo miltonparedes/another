@@ -54,37 +54,54 @@ dl {
   margin-bottom: 1rem;
 }
 
-.post-content {
-  ol,
-  ul {
-    padding-left: 1.25em;
-  }
+ol,
+ul {
+  padding-left: 1.25em;
+}
 
-  ul li{
+ul li{
+  &:before {
+    color: rgba(5,5,38,0.3);
+    color: rgba(var(--rgb-primary), 0.3);
+    padding-right: 0.4em;
+    content: "•";
+    position: absolute;
+    margin-top: -0.1em;
+    margin-left: -0.85em;
+  }
+}
+
+ol {
+  counter-reset: decimal-counter;
+}
+
+ol li{
+  &:before {
+    color: rgba(5,5,38,0.3);
+    color: rgba(var(--rgb-primary), 0.3);
+    padding-right: 0.4em;
+    content: counter(decimal-counter) ".";
+    counter-increment: decimal-counter;
+    position: absolute;
+    margin-left: -1.15em;
+  }
+}
+
+.unstyle-list{
+  padding-left: 0;
+
+  li{
     &:before {
-      color: rgba(5,5,38,0.3);
-      color: rgba(var(--rgb-primary), 0.3);
-      padding-right: 0.4em;
-      content: "•";
-      position: absolute;
-      margin-top: -0.1em;
-      margin-left: -0.85em;
+      padding-right: 0;
+      content: "";
+      display: none;
     }
-  }
-
-  ol {
-    counter-reset: decimal-counter;
   }
 
   ol li{
     &:before {
-      color: rgba(5,5,38,0.3);
-      color: rgba(var(--rgb-primary), 0.3);
-      padding-right: 0.4em;
-      content: counter(decimal-counter) ".";
-      counter-increment: decimal-counter;
-      position: absolute;
-      margin-left: -1.15em;
+      content: "";
+      display: none;
     }
   }
 }

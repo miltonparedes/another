@@ -2,7 +2,7 @@
 <div class="container">
   <div class="row justify-content-end">
     <nav class="col-auto mb-2 mb-sm-0 menu">
-      <ul>
+      <ul class="unstyle-list">
         {% assign sorted_pages = site.pages | sort: "priority" %}
         {% for node in sorted_pages %}
           {% if node.priority %}
@@ -12,7 +12,7 @@
       </ul>
     </nav>
     <nav class="col-auto social">
-      <ul>
+      <ul class="unstyle-list">
         {%- if site.social.twitter -%}
           <li><a href="//twitter.com/{{ site.social.twitter }}">Twitter</a></li>
         {%- endif -%}

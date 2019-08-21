@@ -10,7 +10,7 @@ layout: page
   <div class="ais-SearchBox" id="searchbox"></div>
   <div class="ais-PoweredBy"></div>
 </div>
-<ul class="posts-feed my-3" id="hits">
+<ul class="posts-feed my-3 unstyle-list" id="hits">
   {% for post in site.posts  limit: 8 %}
     <li class="post-node">
       <a class="post-link row {% unless post.cover %}py-3{% endunless %}" href="{{ post.url | relative_url }}">

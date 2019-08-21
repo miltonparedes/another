@@ -1,5 +1,5 @@
 <nav>
-  <ul class="d-flex flex-column">
+  <ul class="d-flex flex-column unstyle-list">
     {% assign sorted_pages = site.pages | sort: "priority" %}
     {% for node in sorted_pages %}
       {% if node.priority %}

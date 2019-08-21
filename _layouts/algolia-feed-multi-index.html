@@ -22,7 +22,7 @@ layout: page
 
 <div class="tab-content">
   <div class="tab-pane active" id="posts">
-    <ul class="posts-feed" id="hits">
+    <ul class="posts-feed unstyle-list" id="hits">
       {% for post in site.posts  limit: 8 %}
         <li class="post-node">
           <a class="post-link row {% unless post.cover %}py-3{% endunless %}" href="{{ post.url | relative_url }}">
