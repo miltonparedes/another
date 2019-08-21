@@ -23,15 +23,15 @@ function addClass(ele, cls) {
 
 function removeClass(ele, cls) {
   if (hasClass(ele, cls)) {
-      var reg = new RegExp('(\\s|^)' + cls + '(\\s|$)');
-      ele.className = ele.className.replace(reg, '');
+    var reg = new RegExp('(\\s|^)' + cls + '(\\s|$)');
+    ele.className = ele.className.replace(reg, '');
   }
 }
 
 // Add event from js the keep the markup clean
 function init() {
   let elementsArray = document.querySelectorAll(".menu-toggle");
-  elementsArray.forEach(function(element) {
+  elementsArray.forEach(function (element) {
     element.addEventListener("click", toggleMenu);
   });
 }
@@ -40,15 +40,41 @@ function init() {
 function toggleMenu() {
   var ele = document.getElementsByTagName('body')[0];
   if (!hasClass(ele, "open")) {
-      addClass(ele, "open");
+    addClass(ele, "open");
   } else {
-      removeClass(ele, "open");
+    removeClass(ele, "open");
   }
 }
 
 // Prevent the function to run before the document is loaded
-document.addEventListener('readystatechange', function() {
+document.addEventListener('readystatechange', function () {
   if (document.readyState === "complete") {
-      init();
+    init();
+  }
+});
+
+// Tabs
+
+window.addEventListener("load", function () {
+  // store tabs variable
+  var myTabs = document.querySelectorAll("ul.nav-tabs > li");
+  function myTabClicks(tabClickEvent) {
+    for (var i = 0; i < myTabs.length; i++) {
+      myTabs[i].classList.remove("active");
+    }
+    var clickedTab = tabClickEvent.currentTarget;
+    clickedTab.classList.add("active");
+    tabClickEvent.preventDefault();
+    var myContentPanes = document.querySelectorAll(".tab-pane");
+    for (i = 0; i < myContentPanes.length; i++) {
+      myContentPanes[i].classList.remove("active");
+    }
+    var anchorReference = tabClickEvent.target;
+    var activePaneId = anchorReference.getAttribute("href");
+    var activePane = document.querySelector(activePaneId);
+    activePane.classList.add("active");
+  }
+  for (i = 0; i < myTabs.length; i++) {
+    myTabs[i].addEventListener("click", myTabClicks)
   }
 });
